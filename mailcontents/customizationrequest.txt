@@ -1,0 +1,22 @@
+Date: ##DATE##
+ 
+To: 
+##COORDINATORNAME##
+  
+                					Sub: Customization have been added by ##IMPLEMENTERNAME## (Beta)
+				                                                              
+Dear Sir,
+   
+Customization details have been added by ##IMPLEMENTERNAME## for the customer ##COMPANYNAME## on ##DATETIME## 
+Reference file: ##REFERENCEFILENAME##
+SPP Data Backup: ##SPPDATAFILENAME##
+Customization details:
+##REMARKS##
+
+
+Regards,
+ 
+Relyon Softech Ltd, Bangalore
+ 
+ 
+                           This email is a system generated message. Please do not reply to this message(IM).

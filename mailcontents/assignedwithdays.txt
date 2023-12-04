@@ -1,0 +1,20 @@
+Date: ##DATE##
+ 
+To: 
+##COMPANYNAME##
+  
+                					Sub: Implementation Assigned for ##INVOICENO## is ##TOTALDAYS## days (Beta)
+				                                                              
+Dear ##NAME##,
+   
+To undergo complete Implementation process total ##TOTALDAYS## visits are assigned.Kindly co-operate for the same.
+
+
+In case of any support required, please contact 1860-425-5570 or write at support@relyonsoft.com. 
+
+Regards,
+ 
+Relyon Softech Ltd, Bangalore
+ 
+ 
+                           This email is a system generated message(##EMAILID##). Please do not reply to this message(IM).

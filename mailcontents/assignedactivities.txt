@@ -1,0 +1,19 @@
+Date: ##DATE##
+ 
+To: 
+##COMPANYNAME##
+  
+                					Sub: Activities list to be performed by ##IMPLEMENTERNAME## (Beta)
+				                                                              
+Dear ##NAME##,
+   
+The list of activities to be implemented are as shown in below table : 
+##TABLE##
+
+
+Regards,
+ 
+Relyon Softech Ltd, Bangalore
+ 
+ 
+                           This email is a system generated message(##EMAILID##). Please do not reply to this message(IM).

@@ -1,0 +1,20 @@
+Date: ##DATE##
+ 
+To: 
+##COMPANYNAME##
+  
+                					Sub: ##IMPLEMENTERNAME## Assigned for ##HANDHOLD## Implementation(Beta)
+				                                                              
+Dear Sir/Madam,
+   
+You have been assigned with an Implementer named ##IMPLEMENTERNAME## and will be visiting your place on ##HANDHOLDDATE## ##HANDHOLDTYPE##. 
+
+
+In case of any support required, please contact 1860-425-5570 or write at support@relyonsoft.com. 
+
+Regards,
+ 
+Relyon Softech Ltd, Bangalore
+ 
+ 
+                           This email is a system generated message(##EMAILID##). Please do not reply to this message(IM).sdasdasd

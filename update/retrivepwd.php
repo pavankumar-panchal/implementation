@@ -2,10 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Password Retrival | Implementer Login</title>
-<? include('../inc/scriptsandstyles.php'); ?>
-<script language="javascript" src="../functions/cookies.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/javascript.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/retrivepwd.js?dummy=<? echo (rand());?>"></script>
+<?php include('../inc/scriptsandstyles.php'); ?>
+<script language="javascript" src="../functions/cookies.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/javascript.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/retrivepwd.js?dummy=<?php echo (rand());?>"></script>
 
 </head>
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="maincontainer">

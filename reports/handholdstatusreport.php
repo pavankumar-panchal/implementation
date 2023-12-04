@@ -1,4 +1,4 @@
-<?
+<?php
 $fybegin = (date('m') >= '04')?(date('Y').'-04-01'):((date('Y')-1).'-04-01');
 $userid = imaxgetcookie('userslno');
 $query = "select * from inv_mas_implementer where slno = '".$userid."'";
@@ -15,9 +15,9 @@ if($coordinator!= 'yes')
 }
 include("../inc/eventloginsert.php");
 ?>
-<link href="../style/main.css?dummy=<? echo (rand());?>" rel=stylesheet>
-<script language="javascript" src="../functions/handholdstatus.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/datepickercontrol.js?dummy=<? echo (rand());?>" type="text/javascript"></script>
+<link href="../style/main.css?dummy=<?php echo (rand());?>" rel=stylesheet>
+<script language="javascript" src="../functions/handholdstatus.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/datepickercontrol.js?dummy=<?php echo (rand());?>" type="text/javascript"></script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
   <tr>
     <td width="77%" valign="top" style="border-bottom:#1f4f66 1px solid;"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
@@ -55,24 +55,24 @@ include("../inc/eventloginsert.php");
                                         <tr>
                                           <td align="left" bgcolor="#EDF4FF">From Date:</td>
                                           <td align="left">
-                                          <input name="fromdate" type="text" class="swifttext-mandatory" id="DPC_fromdate" size="30" autocomplete="off" value="<? echo(changedateformat($fybegin)); ?>" /></td>
+                                          <input name="fromdate" type="text" class="swifttext-mandatory" id="DPC_fromdate" size="30" autocomplete="off" value="<?php echo(changedateformat($fybegin)); ?>" /></td>
                                         </tr>
                                         <tr>
                                           <td align="left" bgcolor="#f7faff">To Date:</td>
-                                          <td align="left" bgcolor="#f7faff"><input name="todate" type="text" class="swifttext-mandatory" id="DPC_todate" size="30" autocomplete="off" value="<? echo(datetimelocal('d-m-Y')); ?>"  /></td>
+                                          <td align="left" bgcolor="#f7faff"><input name="todate" type="text" class="swifttext-mandatory" id="DPC_todate" size="30" autocomplete="off" value="<?php echo(datetimelocal('d-m-Y')); ?>"  /></td>
                                         </tr>
                                           <tr bgcolor="#EDF4FF">
                                             <td valign="top" bgcolor="#EDF4FF" align="left">Sales Person:</td>
                                             <td valign="top" bgcolor="#EDF4FF" align="left"><select name="salesperson" class="swiftselect-mandatory" id="salesperson" style=" width:225px">
                                                 <option value="">ALL</option>
-                                                <? include('../inc/implementerdealer.php'); ?>
+                                                <?php include('../inc/implementerdealer.php'); ?>
                                               </select>                                            </td>
                                           </tr>
                                           <tr bgcolor="#EDF4FF">
                                             <td valign="top" bgcolor="#EDF4FF" align="left">Implementer:</td>
                                             <td valign="top" bgcolor="#EDF4FF" align="left"><select name="implementer" class="swiftselect-mandatory" id="implementer" style=" width:225px">
                                                 <option value="">ALL</option>
-                                                <? include('../inc/implementer.php'); ?>
+                                                <?php include('../inc/implementer.php'); ?>
                                               </select>                                            </td>
                                           </tr>
                                            <tr bgcolor="#EDF4FF">
@@ -137,7 +137,7 @@ include("../inc/eventloginsert.php");
                                           </tr >
                                           <tr bgcolor="#f7faff" >
                                             <td colspan="2" valign="top" bgcolor="#f7faff" align="left"><div style="height:110px; overflow:scroll">
-                                                <? include('../inc/imp-product.php'); ?>
+                                                <?php include('../inc/imp-product.php'); ?>
                                               </div></td>
                                           </tr>
                                           <tr bgcolor="#EDF4FF">
@@ -154,7 +154,7 @@ include("../inc/eventloginsert.php");
                                           <tr bgcolor="#f7faff" >
                                             
                                             <td colspan="2" valign="top" bgcolor="#f7faff" align="left"><div style="height:110px; overflow:scroll">
-                                                <? include('../inc/imp-handhold.php'); ?>
+                                                <?php include('../inc/imp-handhold.php'); ?>
                                               </div></td>
                                           </tr>
                                           <tr bgcolor="#EDF4FF">
@@ -171,12 +171,12 @@ include("../inc/eventloginsert.php");
                                           </tr >
                                           <tr bgcolor="#EDF4FF" >
                                             <td colspan="2" valign="top" bgcolor="#EDF4FF" align="left"><div style="height:140px; overflow:scroll">
-                                                <? if($coordinator == 'yes') { ?>  
+                                                <?php if($coordinator == 'yes') { ?>  
                                                     <input checked="checked" type="checkbox" name="summarize[]" id="status1" value="status1" />
                                                     <label for="status1">Implementation, Yet to be Assigned</label><br />
                                                     <input checked="checked" type="checkbox" name="summarize[]" id="status2" value="status2"/>
                                                    <label for="status2"> Assigned For Implementation</label><br />
-                                                <? } ?>
+                                                <?php } ?>
                                                     <input checked="checked" type="checkbox" name="summarize[]" id="status3" value="status3"/>
                                                     <label for="status3">Implementation in progess</label><br />
                                                     <input checked="checked" type="checkbox" name="summarize[]" id="status4" value="status4"/>

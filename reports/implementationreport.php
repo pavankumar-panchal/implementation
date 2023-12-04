@@ -1,4 +1,4 @@
-<?
+<?php
 	include('../inc/eventloginsert.php');
 	$userid = imaxgetcookie('userslno');
 	$query = "select * from inv_mas_implementer where slno = '".$userid."'";
@@ -11,11 +11,11 @@
     $implementerpiece = " and inv_mas_implementer.slno ='".$userid."'";
   }
 ?>
-<link href="../style/main.css?dummy=<? echo (rand());?>" rel=stylesheet>
-<link media="screen" rel="stylesheet" href="../style/imp-colorbox.css?dummy=<? echo (rand());?>"  />
-<script language="javascript" src="../functions/colorbox.js?dummy=<? echo (rand());?>" ></script>
-<script language="javascript" src="../functions/implementationreport.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/javascript.js?dummy=<? echo (rand());?>"></script>
+<link href="../style/main.css?dummy=<?php echo (rand());?>" rel=stylesheet>
+<link media="screen" rel="stylesheet" href="../style/imp-colorbox.css?dummy=<?php echo (rand());?>"  />
+<script language="javascript" src="../functions/colorbox.js?dummy=<?php echo (rand());?>" ></script>
+<script language="javascript" src="../functions/implementationreport.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/javascript.js?dummy=<?php echo (rand());?>"></script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
   <tr>
     <td width="77%" valign="top" style="border-bottom:#1f4f66 1px solid; text-align: center;"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
@@ -80,14 +80,14 @@
                                                                                       <td>Dealer:</td>
                                                                                       <td align="left" valign="top"   height="10"><select name="currentdealer" class="swiftselect" id="currentdealer" style="width:180px;">
                                                                                           <option value="">ALL</option>
-                                                                                          <? include('../inc/implementerdealer.php');?>
+                                                                                          <?php include('../inc/implementerdealer.php');?>
                                                                                         </select></td>
                                                                                     </tr>
                                                                                     <tr>
                                                                                       <td>Implementer:</td>
                                                                                       <td align="left" valign="top"   height="10"><select name="implementer" class="swiftselect" id="implementer" style="width:180px;">
                                                                                           <option value="">ALL</option>
-                                                                                          <? include('../inc/implementer.php');?>
+                                                                                          <?php include('../inc/implementer.php');?>
                                                                                         </select></td>
                                                                                     </tr>
                                                                                   </table></td>
@@ -97,7 +97,7 @@
                                                                                       <td align="left" valign="top"   height="10" ><select name="type" class="swiftselect" id="type" style="width:180px;">
                                                                                           <option value="">ALL</option>
                                                                                           <option value="Not Selected">Not Selected</option>
-                                                                                          <? include('../inc/custype.php');?>
+                                                                                          <?php include('../inc/custype.php');?>
                                                                                         </select></td>
                                                                                     </tr>
                                                                                     <tr>
@@ -105,7 +105,7 @@
                                                                                       <td align="left" valign="top"   height="10" ><select name="category" class="swiftselect" id="category" style="width:180px;">
                                                                                           <option value="">ALL</option>
                                                                                           <option value="Not Selected">Not Selected</option>
-                                                                                          <? include('../inc/category.php');?>
+                                                                                          <?php include('../inc/category.php');?>
                                                                                         </select></td>
                                                                                     </tr>
                                                                                   </table></td>
@@ -209,7 +209,7 @@
                                               <td colspan=3><table width="100%" border="0" cellspacing="0" cellpadding="3">
                                                   <tr>
                                                     <td align="left" style="font-size:12px" ><strong>Status wise</strong>
-                                                      <!-- <input type="hidden" id="branchcount"  name="branchcount" value="<? //echo($branchcount); ?>"/></td> -->
+                                                      <!-- <input type="hidden" id="branchcount"  name="branchcount" value="<?php //echo($branchcount); ?>"/></td> -->
                                                   </tr>
                                                   <tr>
                                                     <td><table width="100%" border="0" cellspacing="0" cellpadding="10" class="imp_table-border">
@@ -358,7 +358,7 @@
                                                                                                   <td>Dealer:</td>
                                                                                                   <td align="left" valign="top"   height="10"><select name="currentdealer2" class="swiftselect" id="currentdealer2" style="width:180px;">
                                                                                                       <option value="">ALL</option>
-                                                                                                      <? include('../inc/firstdealer.php');?>
+                                                                                                      <?php include('../inc/firstdealer.php');?>
                                                                                                     </select></td>
                                                                                                 </tr>
                                                                                                 <tr>
@@ -366,7 +366,7 @@
                                                                                                   <td align="left" valign="top"   height="10" ><select name="type2" class="swiftselect" id="type2" style="width:180px;">
                                                                                                       <option value="">ALL</option>
                                                                                                       <option value="Not Selected">Not Selected</option>
-                                                                                                      <? include('../inc/custype.php');?>
+                                                                                                      <?php include('../inc/custype.php');?>
                                                                                                     </select></td>
                                                                                                 </tr>
                                                                                                 <tr>
@@ -374,14 +374,14 @@
                                                                                                   <td align="left" valign="top"   height="10" ><select name="category2" class="swiftselect" id="category2" style="width:180px;">
                                                                                                       <option value="">ALL</option>
                                                                                                       <option value="Not Selected">Not Selected</option>
-                                                                                                      <? include('../inc/category.php');?>
+                                                                                                      <?php include('../inc/category.php');?>
                                                                                                     </select></td>
                                                                                                 </tr>
                                                                                                 <tr>
                                                                                                   <td>Implementer:</td>
                                                                                                   <td align="left" valign="top"   height="10"><select name="implementer2" class="swiftselect" id="implementer2" style="width:180px;">
                                                                                                       <option value="">ALL</option>
-                                                                                                      <? include('../inc/implementer.php');?>
+                                                                                                      <?php include('../inc/implementer.php');?>
                                                                                                     </select></td>
                                                                                                 </tr>
                                                                                               </table></td>

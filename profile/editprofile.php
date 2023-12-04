@@ -1,12 +1,12 @@
-<?
+<?php
 	$userid = imaxgetcookie('userslno');
 	include('../inc/eventloginsert.php');
 
 ?>
-<link href="../style/main.css?dummy=<? echo (rand());?>" rel=stylesheet>
-<link rel="stylesheet" type="text/css" href="../style/global.css?dummy=<? echo (rand());?>">
-<script language="javascript" src="../functions/javascript.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/update.js?dummy=<? echo (rand());?>"></script>
+<link href="../style/main.css?dummy=<?php echo (rand());?>" rel=stylesheet>
+<link rel="stylesheet" type="text/css" href="../style/global.css?dummy=<?php echo (rand());?>">
+<script language="javascript" src="../functions/javascript.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/update.js?dummy=<?php echo (rand());?>"></script>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
   <tr>
     <td width="77%" valign="top" style="border-bottom:#1f4f66 1px solid; text-align:left"><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
@@ -51,7 +51,7 @@
                                                 <tr bgcolor="#f7faff">
                                                   <td valign="top" bgcolor="#EDF4FF"><div align="left">Address:</div></td>
                                                   <td valign="top" bgcolor="#EDF4FF"><div align="left">
-                                                    <textarea name="address" cols="27" class="swifttextarea" id="address"><? echo($address); ?></textarea>
+                                                    <textarea name="address" cols="27" class="swifttextarea" id="address"><?php echo($address); ?></textarea>
                                                     <br />
                                                   </div></td>
                                                 </tr>
@@ -66,7 +66,7 @@
                                                   <td valign="top" bgcolor="#f7faff"><div align="left">
                                                     <select name="state" class="swiftselect-mandatory" id="state" onchange="districtcodeFunction();" style="width:200px;">
                                                       <option value="">Select A State</option>
-                                                      <? include('../inc/state.php'); ?>
+                                                      <?php include('../inc/state.php'); ?>
                                                     </select>
                                                   </div></td>
                                                 </tr>
@@ -145,8 +145,8 @@
                                                                                               <tr>
                                                   <td width="75%" height="35" align="left" valign="middle"><div id="form-error" align="left">&nbsp;</div></td>
                                                   <td width="25%" height="35" align="right" valign="middle">&nbsp;
-                                                    <input name="update" type="button" class="swiftchoicebutton" id="update" value="Update" onclick="formsubmit(<? echo($userid) ?>);" />                                                    &nbsp;&nbsp;
-                                                  <input name="clear" type="reset" class="swiftchoicebutton" id="reset" value="Reset"  onClick="document.getElementById('form-error').innerHTML = '';validate(<? echo($userid); ?>)"/></td>
+                                                    <input name="update" type="button" class="swiftchoicebutton" id="update" value="Update" onclick="formsubmit(<?php echo($userid) ?>);" />                                                    &nbsp;&nbsp;
+                                                  <input name="clear" type="reset" class="swiftchoicebutton" id="reset" value="Reset"  onClick="document.getElementById('form-error').innerHTML = '';validate(<?php echo($userid); ?>)"/></td>
                                                 </tr>
                                             </table></td>
                                           </tr>

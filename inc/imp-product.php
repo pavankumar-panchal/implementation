@@ -1,4 +1,4 @@
-<?
+<?php
 	if($handhold == 'yes')
 			$assignimp = "imp_implementation.assignhandholdimplementation";
 	else

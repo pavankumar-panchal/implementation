@@ -1,4 +1,4 @@
-<?
+<?php
 if(imaxgetcookie('userslno') <> '' || imaxgetcookie('userslno') <>  false) 
 {
 	$pagelinksplit = explode('/',$pagelink);

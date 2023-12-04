@@ -1,11 +1,11 @@
-<?
+<?php
 $userid = imaxgetcookie('userslno');
 include('../inc/eventloginsert.php');
 
 ?>
-<link href="../style/main.css?dummy=<? echo (rand());?>" rel=stylesheet>
-<SCRIPT src="../functions/javascript.js?dummy=<? echo (rand());?>" type=text/javascript></SCRIPT>
-<SCRIPT src="../functions/changepwd.js?dummy=<? echo (rand());?>" type=text/javascript></SCRIPT>
+<link href="../style/main.css?dummy=<?php echo (rand());?>" rel=stylesheet>
+<SCRIPT src="../functions/javascript.js?dummy=<?php echo (rand());?>" type=text/javascript></SCRIPT>
+<SCRIPT src="../functions/changepwd.js?dummy=<?php echo (rand());?>" type=text/javascript></SCRIPT>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
   <tr>
     <td valign="top" style="border-right:#1f4f66 1px solid;border-bottom:#1f4f66 1px solid;" ><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
@@ -53,7 +53,7 @@ include('../inc/eventloginsert.php');
                                             <tr>
                                               <td>&nbsp;
                                                   <div align="center">
-                                                    <input name="update"  value="Update" type="submit" class="swiftchoicebutton" id="update"  onclick="validating(<? echo($userid); ?>);" />
+                                                    <input name="update"  value="Update" type="submit" class="swiftchoicebutton" id="update"  onclick="validating(<?php echo($userid); ?>);" />
                                                     &nbsp;
                                                     <input name="reset"  value="Clear" type="reset" class="swiftchoicebutton" id="reset" onClick="document.getElementById('form-error').innerHTML = '';"/>
                                                   </div></td>

@@ -61,7 +61,7 @@ function runicicidbquery($query)
 	 $icicidbname = "relyon_icici";
  
 	 //Connect to Database
-	 mysqli_select_db($icicidbname,$newconnection) or die("Cannot connect to database");
+	 mysqli_select_db($newconnection,$icicidbname) or die("Cannot connect to database");
 	 set_time_limit(3600);
 	 
 	 //Run the query
@@ -129,25 +129,24 @@ function changedateformatwithtime($date)
 	return $date;
 }
 
-
-
 function cusidsplit($customerid)
 {
-	$strlen = strlen($customerid);
-	if($strlen <> '17')
-	{
-		if(strpos($customerid, " "))
-		$result = split(" ",$customerid);
-		else
-		$result = split("[:./-]",$customerid);
-		$customerid = $result[0].$result[1].$result[2].$result[3];
-	}
-	/*else
-	{
-		$customerid = "";
-	}*/
-		return $customerid;
+    $strlen = strlen($customerid);
+
+    if ($strlen != 17) {
+        if (strpos($customerid, " ")) {
+            $result = preg_split("/\s+/", $customerid);
+        } else {
+            $result = preg_split("/[:.\/-]/", $customerid);
+        }
+
+        // Concatenate the array elements to form the customer ID
+        $customerid = implode("", $result);
+    }
+
+    return $customerid;
 }
+
 
 function cusidcombine($customerid)
 {

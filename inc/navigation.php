@@ -1,4 +1,4 @@
-<?
+<?php
 	$userid = imaxgetcookie('userslno');
 	$query = "select implementertype,coordinator,handhold from inv_mas_implementer where slno = '".$userid."'";
 	$resultfetch = runmysqlqueryfetch($query);
@@ -14,16 +14,16 @@
             <LI class=current><A href="./index.php?a_link=dashboard">Home</A> </LI>
             <LI><a>Implementation Process</a>
               <ul>
-              	<? if($coordinator == 'yes') {?>
+              	<?php if($coordinator == 'yes') {?>
                 <li><a href="./index.php?a_link=assignimplementation">Assign Implementation</a></li>
-                <?  } if(($implementertype == 'implementer') || ($coordinator == 'yes')) { ?>
+                <?php  } if(($implementertype == 'implementer') || ($coordinator == 'yes')) { ?>
                 <li><a href="./index.php?a_link=implementation">Implementation</a></li>
-               <? if(($handhold == 'yes')) { ?><li><a href="./index.php?a_link=handholdprocess">Hand Hold</a></li> <? } ?>
-                <? } if(($implementertype == 'customizer') || ($coordinator == 'yes')){ ?>
+               <?php if(($handhold == 'yes')) { ?><li><a href="./index.php?a_link=handholdprocess">Hand Hold</a></li> <?php } ?>
+                <?php } if(($implementertype == 'customizer') || ($coordinator == 'yes')){ ?>
                 <li><a href="./index.php?a_link=customization">Customization</a></li>
-                <? } if(($implementertype == 'webmodule') || ($coordinator == 'yes')){ ?>
+                <?php } if(($implementertype == 'webmodule') || ($coordinator == 'yes')){ ?>
 <!--                <li><a href="./index.php?a_link=custpayment">Web Implementation</a></li>
--->                <? } ?>
+-->                <?php } ?>
               </ul>
             </LI>
             <LI class=current><a>Reports</a>
@@ -32,7 +32,7 @@
                   <ul class="sf-menu"> -->
                     <li><a href="./index.php?a_link=implementationsummary">Implementation Summary</a></li>
                     <li><a href="./index.php?a_link=implementationdetailed">Implementation Detailed Report </a></li>
-                    <? if(($handhold == 'yes')) { ?><li><a href="./index.php?a_link=handholddetailed">Hand Hold Detailed Report</a></li> <? } ?>
+                    <?php if(($handhold == 'yes')) { ?><li><a href="./index.php?a_link=handholddetailed">Hand Hold Detailed Report</a></li> <?php } ?>
                   <!-- </ul>
                 </li> -->
               </ul>

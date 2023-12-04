@@ -1,4 +1,4 @@
-<? 
+<?php 
 	$userid = imaxgetcookie('userslno');
 	$query = "select implementertype,coordinator from inv_mas_implementer where slno = '".$userid."'";
 	$resultfetch = runmysqlqueryfetch($query);
@@ -15,15 +15,15 @@
 	{
 		include('../inc/eventloginsert.php');
 ?>
-<link href="../style/style.css?dummy=<? echo (rand());?>" rel=stylesheet>
-<link media="screen" rel="stylesheet" href="../style/colorbox.css?dummy=<? echo (rand());?>" />
-<script language="javascript" src="../functions/assignimplementation.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/getdistrictjs.php?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/javascript.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/datepickercontrol.js?dummy=<? echo (rand());?>" type="text/javascript"></script>
-<script language="javascript" src="../functions/jquery.colorbox.js?dummy=<? echo (rand());?>"></script>
+<link href="../style/style.css?dummy=<?php echo (rand());?>" rel=stylesheet>
+<link media="screen" rel="stylesheet" href="../style/colorbox.css?dummy=<?php echo (rand());?>" />
+<script language="javascript" src="../functions/assignimplementation.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/getdistrictjs.php?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/javascript.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/datepickercontrol.js?dummy=<?php echo (rand());?>" type="text/javascript"></script>
+<script language="javascript" src="../functions/jquery.colorbox.js?dummy=<?php echo (rand());?>"></script>
 <div style="left: -1000px; top: 597px;visibility: hidden; z-index:100" id="tooltip1">dummy</div>
-<script language="javascript" src="../functions/tooltip.js?dummy=<? echo (rand());?>"></script>
+<script language="javascript" src="../functions/tooltip.js?dummy=<?php echo (rand());?>"></script>
 <table width="952" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
   <tr>
     <td width="23%" valign="top" style="border-right:#1f4f66 1px solid;border-bottom:#1f4f66 1px solid; text-align:left" ><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
@@ -745,7 +745,7 @@
                                                                         <td width="12%">Assign To:</td>
                                                                         <td width="48%"><select name="assigndays_imp" class="swiftselect" id="assigndays_imp" style="width:175px;">
                                                                             <option value="" selected="selected">Select an Implementer</option>
-                                                                            <? include('../inc/implementer.php')?>
+                                                                            <?php include('../inc/implementer.php')?>
                                                                           </select>
                                                                           &nbsp;<a class="r-text" onclick="assignimplementation('implementation','displayimplementername','assigndays_imp');">Go &#8250;&#8250; </a>&nbsp;<span id="sendemail1"><a class="r-text" onclick="sendemailonupdate('assignedimplementer')">Send Email &#8250;&#8250; </a></span></td>
                                                                       </tr>
@@ -774,7 +774,7 @@
                                                                             <table width="100%" border="0" cellspacing="0" cellpadding="4" >
                                                                               <tr>
                                                                                 <td width="14%">Date:</td>
-                                                                                <td width="37%"><input name="DPC_attachfromdate1" type="text" class="swifttext-mandatory" id="DPC_attachfromdate1" size="30" autocomplete="off" value="<? echo(datetimelocal('d-m-Y')); ?>" readonly="readonly"/></td>
+                                                                                <td width="37%"><input name="DPC_attachfromdate1" type="text" class="swifttext-mandatory" id="DPC_attachfromdate1" size="30" autocomplete="off" value="<?php echo(datetimelocal('d-m-Y')); ?>" readonly="readonly"/></td>
                                                                                 <td width="12%" valign="top">Remarks:</td>
                                                                                 <td width="37%" valign="top"><input name="assigndays_remarks" type="text" class="swifttext-mandatory" id="assigndays_remarks" size="35" autocomplete="off" value="" /></td>
                                                                               </tr>
@@ -835,7 +835,7 @@
                                                                                 <td width="13%" valign="top">Activity:</td>
                                                                                 <td width="38%" valign="top"><select name="assignactivity" class="swiftselect" id="assignactivity" style="width:200px;">
                                                                                     <option value="" selected="selected">Select an Activity</option>
-                                                                                    <? include('../inc/activity.php')?>
+                                                                                    <?php include('../inc/activity.php')?>
                                                                                   </select></td>
                                                                                 <td width="12%" valign="top">Remarks:</td>
                                                                                 <td width="37%" valign="top"><input name="assignactivity_remarks" type="text" class="swifttext-mandatory" id="assignactivity_remarks" size="35" autocomplete="off" value="" /></td>
@@ -914,7 +914,7 @@
                                                                           <td width="13%">Assigned To:</td>
                                                                           <td width="37%"><select name="customizer" class="swiftselect" id="customizer" style="width:200px;">
                                                                               <option value="" selected="selected">Select a Customizer</option>
-                                                                              <? include('../inc/customizer.php')?>
+                                                                              <?php include('../inc/customizer.php')?>
                                                                             </select>
                                                                             &nbsp;<a class="r-text" onClick="assignimplementation('customization','displaycustomizername','customizer');">Go &#8250;&#8250;</a></td>
                                                                           <td width="14%">Currently With:</td>
@@ -928,7 +928,7 @@
                                                                         </tr>
                                                                         <tr  bgcolor="#EDF4FF">
                                                                           <td valign="top">Date:</td>
-                                                                          <td valign="top"><input name="DPC_attachfromdate2" type="text" class="swifttext-mandatory" id="DPC_attachfromdate2" size="30" autocomplete="off" value="<? echo(datetimelocal('d-m-Y')); ?>" readonly="readonly"/></td>
+                                                                          <td valign="top"><input name="DPC_attachfromdate2" type="text" class="swifttext-mandatory" id="DPC_attachfromdate2" size="30" autocomplete="off" value="<?php echo(datetimelocal('d-m-Y')); ?>" readonly="readonly"/></td>
                                                                           <td valign="top">Remarks:</td>
                                                                           <td valign="top"><input name="customizer_remarks" type="text" class="swifttext-mandatory" id="customizer_remarks" size="35" autocomplete="off" value="" /></td>
                                                                         </tr>
@@ -1001,7 +1001,7 @@
                                                                           <td width="13%">Assigned To:</td>
                                                                           <td width="37%"><select name="webimplementer" class="swiftselect" id="webimplementer" style="width:200px;">
                                                                               <option value="" selected="selected">Select a Webimplementer</option>
-                                                                              <? include('../inc/webimplementer.php')?>
+                                                                              <?php include('../inc/webimplementer.php')?>
                                                                             </select>
                                                                             &nbsp;<a class="r-text" onclick="assignimplementation('webimplementation','displaywebimplementername','webimplementer');">Go &#8250;&#8250;</a></td>
                                                                           <td width="14%">Currently With:</td>
@@ -1109,6 +1109,6 @@
   </tr>
 </table>
 <script>gettotalcustomercount();</script>
-<?
+<?php
 }
 ?>

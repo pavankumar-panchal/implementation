@@ -1,4 +1,4 @@
-<?
+<?php
 	$query = "SELECT * from imp_mas_handholdtype";
 	$result = runmysqlquery($query);
 	while($fetch = mysqli_fetch_array($result))

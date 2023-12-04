@@ -1,4 +1,4 @@
-<?
+<?php
 include('../functions/phpfunctions.php'); 
 $requestkey = $_GET['key'];
 $errormessage = "";
@@ -26,9 +26,9 @@ else
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Password Retrival | Implementer Login</title>
-<? include('../inc/scriptsandstyles.php'); ?>
-<script language="javascript" src="../functions/javascript.js?dummy = <? echo (rand());?>"></script>
-<script language="javascript" src="../functions/password.js?dummy = <? echo (rand());?>"></script>
+<?php include('../inc/scriptsandstyles.php'); ?>
+<script language="javascript" src="../functions/javascript.js?dummy = <?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/password.js?dummy = <?php echo (rand());?>"></script>
 </head>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="maincontainer"  style="text-align:left">
@@ -78,14 +78,14 @@ src="../images/herearrow.gif" />
                             <td><table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
                                 <tr>
                                   <td width="23%" valign="top" style="border-bottom:#1f4f66 1px solid;" ><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
-                                  <? if($errormessage <> "") { ?>
+                                  <?php if($errormessage <> "") { ?>
                     <tr>
-                      <td style="font-size:12px; font-family:Verdana; padding:4px; border:2px solid #FF0000; background-color:#FFFF99"><div align="center"><? echo($errormessage); ?></div></td>
+                      <td style="font-size:12px; font-family:Verdana; padding:4px; border:2px solid #FF0000; background-color:#FFFF99"><div align="center"><?php echo($errormessage); ?></div></td>
                     </tr>
-                    <? } ?> <tr>
+                    <?php } ?> <tr>
                       <td style="font-size:12px; font-family:Verdana; padding:4px; padding-left:5px"><p>&nbsp;</p></td>
                     </tr>
-                    <? if($errormessage == "") { ?>
+                    <?php if($errormessage == "") { ?>
                                       <tr>
                                         <td><table width="100%" border="0" align="center" cellpadding="4" cellspacing="0">
                                             <tr>
@@ -98,7 +98,7 @@ src="../images/herearrow.gif" />
                                                             <td colspan="2" style="font-size:12px; color:#FF0000" align="left" ><span style="font-size:12px"><strong>Enter the Password</strong></span></td>
                                                          <tr>
                                           <td colspan="2" height="35px" >Please enter a new password for your login at Dealer Login Area.<br />
-                                            <strong>Your Username: <? echo($fetch['dealerusername']); ?></strong></td>
+                                            <strong>Your Username: <?php echo($fetch['dealerusername']); ?></strong></td>
                                         </tr>
                                                             <td colspan="3" height="35px" ><div id="form-error" align="center"></div></td>
                                                           </tr>
@@ -112,7 +112,7 @@ src="../images/herearrow.gif" />
                                                           </tr>
                                                           <tr>
                                                             <td>&nbsp;</td>
-                                                            <td  align="left" valign="top" style="font-size:12px"><input name="resetpassword" type="button" class="swiftchoicebutton" id="resetpassword" value="Proceed..." onclick="formsubmiting(<? echo('\''.$_GET['key'].'\'') ?>)" />
+                                                            <td  align="left" valign="top" style="font-size:12px"><input name="resetpassword" type="button" class="swiftchoicebutton" id="resetpassword" value="Proceed..." onclick="formsubmiting(<?php echo('\''.$_GET['key'].'\'') ?>)" />
                                                               &nbsp;&nbsp;&nbsp;
                                                               <input name="clearform" type="button" class="swiftchoicebutton" id="clearform" value="Clear" onclick="document.getElementById('form-error').innerHTML='';form.reset()" />                                                            </td>
                                                         </table></td>
@@ -122,7 +122,7 @@ src="../images/herearrow.gif" />
                                             </tr>
                                           </table></td>
                                       </tr>
-                                      <? } ?>
+                                      <?php } ?>
                                     </table></td>
                                 </tr>
                               </table></td>

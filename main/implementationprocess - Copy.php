@@ -1,4 +1,4 @@
-<? 
+<?php 
 $userid = imaxgetcookie('userslno');
 $query = "select implementertype,coordinator from inv_mas_implementer where slno = '".$userid."'";
 $resultfetch = runmysqlqueryfetch($query);
@@ -7,16 +7,16 @@ $coordinator = $resultfetch['coordinator'];
 if($implementertype == 'implementer' || $coordinator == 'yes')
 {
 ?>
-<link href="../style/style.css?dummy=<? echo (rand());?>" rel=stylesheet>
-<link media="screen" rel="stylesheet" href="../style/colorbox.css?dummy=<? echo (rand());?>" />
-<script language="javascript" src="../functions/implementationprocess.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/getdistrictjs.php?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/javascript.js?dummy=<? echo (rand());?>"></script>
-<script language="javascript" src="../functions/datepickercontrol.js?dummy=<? echo (rand());?>" type="text/javascript"></script>
-<script language="javascript" src="../functions/fileupload.js?dummy=<? echo (rand());?>" type="text/javascript"></script>
-<script language="javascript" src="../functions/jquery.colorbox.js?dummy=<? echo (rand());?>"></script>
+<link href="../style/style.css?dummy=<?php echo (rand());?>" rel=stylesheet>
+<link media="screen" rel="stylesheet" href="../style/colorbox.css?dummy=<?php echo (rand());?>" />
+<script language="javascript" src="../functions/implementationprocess.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/getdistrictjs.php?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/javascript.js?dummy=<?php echo (rand());?>"></script>
+<script language="javascript" src="../functions/datepickercontrol.js?dummy=<?php echo (rand());?>" type="text/javascript"></script>
+<script language="javascript" src="../functions/fileupload.js?dummy=<?php echo (rand());?>" type="text/javascript"></script>
+<script language="javascript" src="../functions/jquery.colorbox.js?dummy=<?php echo (rand());?>"></script>
 <div style="left: -1000px; top: 597px;visibility: hidden; z-index:100" id="tooltip1">dummy</div>
-<script language="javascript" src="../functions/tooltip.js?dummy=<? echo (rand());?>"></script>
+<script language="javascript" src="../functions/tooltip.js?dummy=<?php echo (rand());?>"></script>
 <table width="952" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
   <tr>
     <td width="23%" valign="top" style="border-right:#1f4f66 1px solid;border-bottom:#1f4f66 1px solid; text-align:left" ><table width="100%" border="0" cellspacing="0" cellpadding="0" id="mainwrap">
@@ -732,7 +732,7 @@ if($implementertype == 'implementer' || $coordinator == 'yes')
                                                                       </tr>
                                                                       <tr >
                                                                         <td >Visited Date:</td>
-                                                                        <td ><input name="DPC_attachfromdate1" type="text" class="swifttext-mandatory" id="DPC_attachfromdate1" size="27" autocomplete="off" value="<? echo(datetimelocal('d-m-Y')); ?>" readonly="readonly"/></td>
+                                                                        <td ><input name="DPC_attachfromdate1" type="text" class="swifttext-mandatory" id="DPC_attachfromdate1" size="27" autocomplete="off" value="<?php echo(datetimelocal('d-m-Y')); ?>" readonly="readonly"/></td>
                                                                       </tr>
                                                                     </table></td>
                                                                   <td width="51%"><table width="100%" border="0" cellspacing="0" cellpadding="3" >
@@ -759,7 +759,7 @@ if($implementertype == 'implementer' || $coordinator == 'yes')
                                                                           </SELECT></td>
                                                                         <td width="18%" ><select  style="width:50px;" id="starttimemin" >
                                                                             <option value="" selected="selected"> MM </option>
-                                                                            <? include('../inc/seconds.php'); ?>
+                                                                            <?php include('../inc/seconds.php'); ?>
                                                                           </select></td>
                                                                         <td width="37%" ><select name="start_type" id="starttimeampm"  >
                                                                             <option value="" selected="selected">--</option>
@@ -889,7 +889,7 @@ if($implementertype == 'implementer' || $coordinator == 'yes')
                                                                                       </select></td>
                                                                                     <td width="20%" ><select name="endtimemin" id="endtimemin" style="width:50px;"  >
                                                                                         <option value="" selected="selected"> MM </option>
-                                                                                        <? include('../inc/seconds.php'); ?>
+                                                                                        <?php include('../inc/seconds.php'); ?>
                                                                                       </select></td>
                                                                                     <td width="32%" ><select name="endtimeampm" id="endtimeampm"  >
                                                                                         <option value="" selected="selected">--</option>
@@ -998,7 +998,7 @@ if($implementertype == 'implementer' || $coordinator == 'yes')
                                                   </tr>
                                                   <tr>
                                                     <td colspan="2"><div id="references_fileuploaddiv" style="display:none;">
-                                                        <? include('../inc/referenceuploadform.php'); ?>
+                                                        <?php include('../inc/referenceuploadform.php'); ?>
                                                       </div></td>
                                                   </tr>
                                                   <tr bgcolor="#edf4ff">
@@ -1009,7 +1009,7 @@ if($implementertype == 'implementer' || $coordinator == 'yes')
                                                   </tr>
                                                   <tr>
                                                     <td colspan="2"><div id="sppdata_fileuploaddiv" style="display:none;">
-                                                        <? include('../inc/sppdatauploadform.php'); ?>
+                                                        <?php include('../inc/sppdatauploadform.php'); ?>
                                                       </div></td>
                                                   </tr>
                                                   <tr bgcolor="#edf4ff">
@@ -1057,15 +1057,15 @@ if($implementertype == 'implementer' || $coordinator == 'yes')
   </tr>
 </table>
 <div id="fileuploaddiv" style="display:none;">
-  <? include('../inc/iccuploadform.php'); ?>
+  <?php include('../inc/iccuploadform.php'); ?>
 </div>
 <div id="databackupdiv" style="display:none;">
-  <? include('../inc/databackupform.php'); ?>
+  <?php include('../inc/databackupform.php'); ?>
 </div>
 <script>
 refreshcustomerarray();
 </script>
-<?
+<?php
 }
 else
 {
